@@ -39,7 +39,7 @@ Run & connect MS SQL Server Management Studio to your local DB instance.
 
 In the left-hand navigation bar, underneath the server instance, right click on the Databases folder and select New Database.
 
-Enter the database name FalconDb.
+Enter the database name FromBizzDb.
 
 Download Node.js & follow the installation wizard through. https://nodejs.org/en/download/
 
@@ -52,12 +52,12 @@ Before running the project, we need to run a npm task to bundle and minify the C
 
 Run Visual Studio, then //How to connect to Team Server
 
-Download a copy of Syntaq.Falcon from Team Services/Server?
+Download a copy of FormBizz from Team Services/Server?
 
 Load the project, then go Tools > NuGet Package Manager > Package Manager Console. This will open the Package Manager Console at the bottom of the window.
 
-Make sure Default Project is set to Syntaq.Falcon.EntityFrameworkCore at the top of the Package Manager Console.
+Make sure Default Project is set to FormBizz.EntityFrameworkCore at the top of the Package Manager Console.
 
-Inside the console, type "Add-Migration", then when prompted, supply the name of the database (FalconDb).
+Inside the console, type "Add-Migration", then when prompted, supply the name of the database (FormBizzDb).
 
 Next type in the console window "Update-Database". This will generate a local copy of the latest database structure.

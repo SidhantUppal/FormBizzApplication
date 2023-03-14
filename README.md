@@ -61,3 +61,55 @@ Make sure Default Project is set to FormBizz.EntityFrameworkCore at the top of t
 Inside the console, type "Add-Migration", then when prompted, supply the name of the database (FormBizzDb).
 
 Next type in the console window "Update-Database". This will generate a local copy of the latest database structure.
+
+
+Technology that we have used : 
+
+Back-End :
+
+ 1) Asp.Net Zero
+ 2) Asp.NET Core 6.0
+ 3) MVC  (Areas)
+ 4) Entity Freamwork 6.0 (Code First Approach)
+ 5) Web API 
+ 6) Design Pattern (Repogitory Design Pattern) 
+ 7) SigalR
+ 
+
+Front-End :
+
+ 1) Views 
+ 2) Form.IO
+ 3) HTML 5
+ 4) Bootstrap 
+ 5) CSS
+ 6) ForntAwesome 
+ 
+ 
+Clound :
+
+ 1) Azure Function 
+ 2) Azure Blob 
+ 3) Azure Web App & VM
+ 
+ 
+Testing :
+
+ - Manual Testing 
+ 
+   1) xUnit Freamwork 
+   
+ - Autometion 
+ 
+   1) Cypress
+   
+ 
+Autometic Build Publish
+
+ 1) CI/CD Pipeline 
+ 2) Terraform (for auto build & environment setup)
+ 
+ 
+Crone-Job 
+
+ 1) HangFire 

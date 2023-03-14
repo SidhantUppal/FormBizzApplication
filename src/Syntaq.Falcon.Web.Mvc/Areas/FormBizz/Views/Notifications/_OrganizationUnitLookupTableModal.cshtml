@@ -1,0 +1,22 @@
+﻿@using FormBizz.Web.Areas.FormBizz.Models.Common.Modals
+@using FormBizz.Web.TagHelpers
+@model FormBizz.Web.Areas.FormBizz.Models.OrganizationUnits.OrganizationUnitLookupTableModel 
+
+@section Scripts
+{
+    <script abp-src="/view-resources/Areas/App/Views/Notifications/_OrganizationUnitLookupTableModal.js" asp-append-version="true"></script>
+}
+
+@await Html.PartialAsync("~/Areas/FormBizz/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(L("SearchOrganizationUnit")))
+
+<div class="@(await GetContainerClass())">
+    <div class="card card-custom gutter-b">
+        <div class="card-body">
+            <div class="row align-items-center">
+               @await Html.PartialAsync("~/Areas/FormBizz/Views/Common/_OrganizationTree.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("~/Areas/FormBizz/Views/Common/Modals/_ModalFooterWithSaveAndCancel.cshtml")

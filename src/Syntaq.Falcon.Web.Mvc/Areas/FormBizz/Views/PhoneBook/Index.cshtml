@@ -1,0 +1,72 @@
+﻿@using Abp.Application.Services.Dto
+@using FormBizz.Authorization
+@using FormBizz.Web.Areas.FormBizz.Models.Users
+@using FormBizz.Web.Areas.FormBizz.Startup
+
+@{
+    ViewBag.CurrentPageName = FormBizzPageNames.Common.PhoneBook;
+}
+
+@section Styles
+    {
+    <link rel="stylesheet" abp-href="/view-resources/Areas/FormBizz/Views/PhoneBook/index.css" asp-append-version="true" />
+}
+
+    @section Scripts
+    {
+    <script src="~/view-resources/Areas/FormBizz/Views/PhoneBook/_CreatePersonModal.js" asp-append-version="true"></script>
+    <script src="~/view-resources/Areas/FormBizz/Views/PhoneBook/Index.js" asp-append-version="true"></script>
+}
+
+    <abp-page-subheader title="@L("PhoneBook")" description="@L("PersonHeaderInfo")">
+        <div class="row kt-margin-b-5">
+
+            @if (IsGranted(AppPermissions.Pages_PhoneBook_Create))
+        {
+            <button id="CreateNewPersonButton" class="btn btn-primary blue"><i class="fa fa-plus"></i> @L("CreateNewPerson")</button>
+        }
+    </div>
+</abp-page-subheader>
+
+<div class="@(await GetContainerClass())">
+    <div class="card">
+        <div class="card-body">
+            <div class="form">
+                <div class="row align-items-center mb-4">
+                    <div class="col-xl-12">
+                        <div class="mb-5 align-items-center">
+                            <h4 class="kt-portlet__head-title">
+                                @L("AllPeople") (@Model.Items.Count)
+                            </h4>
+
+                            <div class="input-group">
+                                <input id="FilterPeopleText" name="Filter" value="@Model.Filter" class="form-control" placeholder="@L("SearchWithThreeDot")" type="text">
+                                <span class="input-group-btn">
+                                    <button id="btnFilterPeopleSearch" class="btn btn-primary" type="submit">
+                                        <i class="flaticon-search-1" aria-label="@L("Search")"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                            <div class="align-items-center">
+                                <table id="PersonTable" class="table align-middle table-row-dashed fs-6 gy-5 dataTable dtr-inline no-footer">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>@L("Action")</th>
+                                            <th>@L("Name")</th>
+                                            <th>@L("Surname")</th>
+                                            <th>@L("EmailAddress")</th>
+                                            <th>@L("CreationTime")</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

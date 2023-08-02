@@ -14,12 +14,12 @@ Otherwise, you can head over here, grab a copy of the source code and get starte
 # Overview
 The components of the application and their relationships.
 
-Syntaq provides a strong architectural model based on Domain Driven Design, with all the best practices in mind. Syntaq uses the latest ASP.NET  Core & EF Core frameworks.
+FromBizz provides a strong architectural model based on Domain Driven Design, with all the best practices in mind. FromBizz uses the latest ASP.NET  Core & EF Core frameworks.
 
 ASP.NET  Core 3.1
 Azure SQL Server
 Azure Web application hosting infrastructure
-The layering of an application's codebase is a widely accepted technique to help reduce complexity and to improve code reusability. To achieve a layered architecture, SYNTAQ follows the principles of Domain Driven Design delivered using a MCV pattern.
+The layering of an application's codebase is a widely accepted technique to help reduce complexity and to improve code reusability. To achieve a layered architecture, FromBizz follows the principles of Domain Driven Design delivered using a MCV pattern.
 
 Domain Driven Design Layers
 There are four fundamental layers in Domain Driven Design (DDD):
